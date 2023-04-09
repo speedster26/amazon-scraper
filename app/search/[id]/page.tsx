@@ -22,7 +22,7 @@ function SearchPage({params: { id }} : Props) {
     }
 
     const deleteButton = (
-        <button className='bg-sky-600 text-white px-4 py-2 rounded-lg' onClick={handleDelete}>Delete Search</button>
+        <button className='bg-sky-600 text-white md:px-4 md:py-2 rounded-lg text-xs py-1 px-2' onClick={handleDelete}>Delete Search</button>
     )
 
     if (loading) {
@@ -37,19 +37,19 @@ function SearchPage({params: { id }} : Props) {
                 <p className='text-sky-600 animate-pulse text-center'>
                     Scraping results from Amazon...
                 </p>
-                <Spinner style={{height:"100px",width:"100px"}} name='cube-grid' fadeIn='none' color='sky'/>
+                <Spinner style={{height:"100px",width:"100px"}} name='cube-grid' fadeIn='none' color='rgb(2, 132, 199)'/>
             </div>
         );
     }
   return (
     <div className='py-5'>
-        <div className='flex items-center justify-between mb-7'>
-            <div className='flex flex-col md:flex-row gap-x-4'>
+        <div className='flex space-y-2 md:space-y-0 justify-between mb-7 flex-col md:flex-row'>
+            <div className='flex flex-col md:flex-row gap-x-4 text-xs md:text-sm'>
                 <h1 className='font-bold'>
                     Search results for {" "}
-                    <span className='text-sky-600'>{snapshot.data()?.search}</span>
+                    <span className='text-sky-600'>&ldquo;{snapshot.data()?.search}&rdquo;</span>
                 </h1>
-                <p className='text-gray-300'>
+                <p className='text-gray-400'>
                     {snapshot.data()?.results.length>0 && 
                     `${snapshot.data()?.results?.length} results found`} 
                 </p>

@@ -16,7 +16,7 @@ export default function RootLayout({
     <html lang="en">
       <body className='flex bg-[#F7FBFF] h-screen'>
         <Sidebar/>
-        <main className='p-10 max-w-7xl w-full mx-auto overflow-y-auto'>
+        <main className='py-10 md:px-10 px-1 w-full mx-auto overflow-y-auto scrollbar-thin scrollbar-thumb-sky-600 scrollbar-track-sky-100'>
           <Header/>
           {children}
         </main>

@@ -29,6 +29,7 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
-    "@types/react-spinkit": "^3.0.7"
+    "@types/react-spinkit": "^3.0.7",
+    "tailwind-scrollbar": "^3.0.0"
   }
 }

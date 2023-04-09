@@ -41,10 +41,10 @@ function Header() {
     <>
     <Toaster/>
     <header>
-        <form className="flex items-center space-x-2 justify-center rounded-full py-2 px-4 bg-sky-100 max-w-md" onSubmit={handleSubmit}>
-            <input ref={inputRef} className="flex-1 outline-none bg-transparent text-sky-400 placeholder:text-sky-300" type="text" name="search" id="search" placeholder="Search..."/>
+        <form className="flex items-center space-x-2 justify-center rounded-full w-full py-2 px-4 bg-sky-100 max-w-md mx-auto" onSubmit={handleSubmit}>
+            <input ref={inputRef} className="md:flex-1 outline-none bg-transparent text-sky-400 placeholder:text-sky-300 md:placeholder:text-base placeholder:text-xs" type="text" name="search" id="search" placeholder="Search..."/>
             <button hidden>Search</button>
-            <MagnifyingGlassIcon className="h-6 w-6 text-sky-600"/>
+            <MagnifyingGlassIcon className="h-6 w-6 text-sky-600 hidden"/>
         </form>
     </header>
     </>

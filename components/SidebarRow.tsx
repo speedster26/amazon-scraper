@@ -19,7 +19,7 @@ function SidebarRow({doc}:Props) {
     }, [doc.id, pathname])
     
   return (
-    <li onClick={()=>router.push(`/search/${doc.id}`)} className={`flex flex-col md:flex-row justify-between p-4 cursor-pointer hover:bg-white hover:shadow-md rounded-lg`}>
+    <li onClick={()=>router.push(`/search/${doc.id}`)} className={`flex flex-col-reverse md:flex-row justify-between md:p-4 px-1 py-2 cursor-pointer hover:bg-white hover:shadow-md rounded-lg`}>
         <div className="flex flex-col justify-center">
             <p className="text-xs md:text-base font-bold">
                 {doc.data().search}
@@ -30,7 +30,7 @@ function SidebarRow({doc}:Props) {
         </div>
         <span className="ml-2">
                 {doc.data().status === 'pending' ? (
-                    <Spinner name="cube-grid" fadeIn="none" color="sky"/>
+                    <Spinner name="cube-grid" fadeIn="none" color="rgb(2, 132, 199)"/>
                 ):(
                     <CheckCircleIcon className="h-6 w-6 text-green-400"/>
                 )}
